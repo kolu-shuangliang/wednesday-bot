@@ -1,0 +1,4 @@
+{
+    "token": "discord-bot-token",
+    "schedule": "1 * * * * 3"
+}

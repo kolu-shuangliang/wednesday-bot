@@ -3,7 +3,11 @@
 
 ## Config server
 
-Rename ``` config/auth.json.example ``` to ``` config/auth.json ``` and replace variable ``` token ``` value with your bot token from discord.
+Rename ``` config/config.json.example ``` to ``` config/config.json ``` 
+
+1. Replace variable ``` token ``` value with your bot token from discord.
+
+1. Replace variable ``` schedule ``` value for match your timezone. ``` node-schedule ``` format.
 
 ## Running server
 

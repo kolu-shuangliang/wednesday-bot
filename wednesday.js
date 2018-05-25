@@ -3,7 +3,7 @@ var Discord = require('discord.js');
 var logger = require('winston');
 var schedule = require('node-schedule');
 
-var auth = require('./config/auth.json'); // Include config file.
+var config = require('./config/config.json'); // Include config file.
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -43,7 +43,7 @@ client.on('message', msg => {
 });
 
 // Schedule bot for wednesday 00:00:01
-var j = schedule.scheduleJob('1 0 0 * * 3', its_wednesday_my_dudes);
+var j = schedule.scheduleJob(config.schedule, its_wednesday_my_dudes);
 
 
 
@@ -66,4 +66,4 @@ function its_wednesday_my_dudes(){
 }
 
 // Login to discord with client.
-client.login(auth.token);
+client.login(config.token);
